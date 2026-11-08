@@ -1,0 +1,2 @@
+# Colab đã có sẵn torch, numpy, opencv-python, matplotlib — chỉ cần thêm:
+onnx>=1.14

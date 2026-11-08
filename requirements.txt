@@ -1,0 +1,7 @@
+# Chạy trên máy tính (không bắt buộc — notebook Colab tự cài những gì cần)
+torch
+numpy
+opencv-python-headless
+onnx
+matplotlib
+uv

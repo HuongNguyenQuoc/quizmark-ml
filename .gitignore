@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv*/
+
+# Dữ liệu & kết quả trung gian (nằm trên Google Drive, không commit)
+data/
+zips/
+out/
+*.zip
+*.npz
+*.pt
+labels_override.csv
+synthetic_truth.csv
+
+# Notebook checkpoint
+.ipynb_checkpoints/
