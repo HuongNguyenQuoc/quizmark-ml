@@ -1,0 +1,55 @@
+{
+  "opencv": "4.5.3",
+  "reference_engine": "onnx.reference.ReferenceEvaluator",
+  "reference_n": 64,
+  "max_logit_difference": 2.288818359375e-05,
+  "max_preprocessing_difference": 5.960464477539063e-08,
+  "n": 4574,
+  "confusion": [
+    [
+      3512,
+      0,
+      0
+    ],
+    [
+      0,
+      884,
+      8
+    ],
+    [
+      0,
+      1,
+      169
+    ]
+  ],
+  "accuracy": 0.9980323567993004,
+  "filled_errors_model": 9,
+  "filled_errors_with_fallback": 9,
+  "filled_errors_threshold": 150,
+  "confidence_fallbacks": 10,
+  "fixture_count": 15,
+  "test_cells_by_template": {
+    "1": 1204,
+    "2": 340,
+    "3": 750,
+    "5": 2280
+  },
+  "fixture_source": "held-out validation and test sheets",
+  "model_sha256": "e675d8b32826f8964bf48d129fecf4831f132d60c6889b6b152b685ce8e0b563",
+  "confidence_cutoff": 0.6,
+  "dataset": "bubble_dataset_synth_v1.zip (generated images only)",
+  "android_smoke_test": {
+    "date": "2026-11-11",
+    "device_model": "23117RA68G",
+    "android_release": "16",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "apk_install": "passed",
+    "startup_model_load_and_forward": "passed",
+    "instrumentation_tests": "passed",
+    "instrumentation_test_count": 5,
+    "classifier_test_count": 3,
+    "original_scan_storage_test_count": 2,
+    "install_method": "adb install --no-streaming -r -t"
+  }
+}

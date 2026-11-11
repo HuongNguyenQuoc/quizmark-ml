@@ -1,0 +1,93 @@
+{
+  "name": "bubble_classifier_v1",
+  "version": 1,
+  "created": "2026-11-11T04:01:44",
+  "classes": [
+    "empty",
+    "filled",
+    "erased"
+  ],
+  "input": {
+    "name": "input",
+    "shape": [
+      1,
+      1,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "layout": "NCHW",
+    "preprocessing": "ô cắt từ grayMat → resize 32x32 INTER_AREA → chia 255"
+  },
+  "output": {
+    "name": "logits",
+    "shape": [
+      1,
+      3
+    ],
+    "note": "softmax ra xác suất; 'erased' = không tô"
+  },
+  "export": {
+    "method": "torch",
+    "ops": [
+      "Conv",
+      "Flatten",
+      "Gemm",
+      "MaxPool",
+      "Relu"
+    ],
+    "opset": 11,
+    "size_kb": 105.6
+  },
+  "torch_version": "2.14.1+cu130",
+  "git_commit": "fae7b0b",
+  "data_counts": {
+    "train": 20376,
+    "val": 3310,
+    "test": 4574
+  },
+  "test_metrics": {
+    "n": 4574,
+    "accuracy": 0.9980323567993004,
+    "macro_f1": 0.9896662282544003,
+    "per_class": {
+      "empty": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3512
+      },
+      "filled": {
+        "precision": 0.9988700564971752,
+        "recall": 0.9910313901345291,
+        "f1": 0.9949352841868319,
+        "support": 892
+      },
+      "erased": {
+        "precision": 0.9548022598870056,
+        "recall": 0.9941176470588236,
+        "f1": 0.9740634005763689,
+        "support": 170
+      }
+    },
+    "confusion": [
+      [
+        3512,
+        0,
+        0
+      ],
+      [
+        0,
+        884,
+        8
+      ],
+      [
+        0,
+        1,
+        169
+      ]
+    ],
+    "filled_errors_model": 9,
+    "filled_errors_threshold": 150
+  }
+}
