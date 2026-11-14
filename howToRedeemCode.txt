@@ -1,0 +1,7 @@
+For Real Android:
+    cd "C:\Users\Huong PC\Documents\TTCS\QuizMark"
+    .\gradlew.bat :app:assembleDebug
+    & "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" -s xslfhuf6lncuqwif install -r -t --no-streaming app\build\outputs\apk\debug\app-debug.apk
+
+For Simulator:
+    Ctrl + Shift + B
