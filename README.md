@@ -69,9 +69,13 @@ bubble_dataset/<empty|filled>/<sheetId>_t<template>_<vùng>_<vị trí>_<lựa c
 ## Chạy trên máy (không bắt buộc)
 
 ```bash
-pip install -r requirements.txt
+# Môi trường train (macOS)
+uv venv .venv
+uv pip install --python .venv -r requirements.txt
 # Kiểm tra bằng OpenCV 4.5.3 (cần Python 3.9; uv tự tải về):
 uv venv .venv-cv453 --python 3.9
 uv pip install --python .venv-cv453 "opencv-python-headless==4.5.3.56" "numpy<2"
-.venv-cv453/Scripts/python src/verify_onnx.py --model out/bubble_classifier_v1.onnx --vectors out/testvectors.npz
+.venv-cv453/bin/python src/verify_onnx.py --model out/bubble_classifier_v1.onnx --vectors out/testvectors.npz
 ```
+
+Trên Windows: thay `.venv-cv453/bin/python` bằng `.venv-cv453\Scripts\python`.

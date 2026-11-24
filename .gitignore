@@ -15,3 +15,6 @@ synthetic_truth.csv
 
 # Notebook checkpoint
 .ipynb_checkpoints/
+
+# Nhật ký phiên chat Claude Code (không commit)
+*.jsonl
